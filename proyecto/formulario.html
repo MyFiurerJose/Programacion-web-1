@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="main.js"></script>
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div style="text-align: center;"><h1 style="color:whitesmoke; background-color: black; font-weight: bold;">Contáctate con nosotros</h1></div>
+
+<div class="container">
+    <div class="row" style="background-color:rgba(156, 151, 151, 0.185); ">
+        <form class="d-flex justify-content-center" /*action="procesar.php"*/ /*method="post"*/ id="formulario">
+            <div id="formul"class="card col-sm-5 p-3">
+                <div class="mb-3">
+                    <h2>Formulario</h2>
+                </div>
+                <div class="form-group">
+                    <div id="alertaNombre" class="alert alert-danger" role="alert">
+                        Debe ingresar un nombre
+                    </div>
+                    <label for="nombre"> Nombres</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Antonio Mario"><br>
+                </div>
+                <div class="form-group">   
+                    <div id="alertaApellido"class="alert alert-danger" role="alert">
+                        Debe ingresar un Apellido
+                    </div>       
+                    <label for="Apellidos">Apellidos</label><br>
+                    <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Salazar Gonzalez"><br>                  
+                </div>
+
+                <div class="form-group">   
+                    <div id="alertaRut"class="alert alert-danger" role="alert">
+                        Debe ingresar un rut válido
+                    </div>       
+                    <label for="Rut">Rut (sin puntos y con guión)</label><br>
+                    <input type="text" class="form-control"  id="txt_rut" name="rut" placeholder="xxxxxxx-x"><br>                  
+                </div>
+
+                <div class="form-group">  
+                    <div id="alertaEmail"class="alert alert-danger" role="alert">
+                        Debe ingresar un email válido
+                    </div>        
+                    <label for="email">Email</label><br>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="pepito14.azul@gmail.com"><br>                  
+                </div>
+
+                <div>
+                    <div id="alertaTelefono"class="alert alert-danger" role="alert">
+                        Debe ingresar un numero de telefono válido
+                    </div>
+                    <label for="telefono">Teléfono (8 digitos):</label>
+                    <input id="telefono" type="text" class="form-control" name="telefono" placeholder="+569XXXXXXXX"><br>
+                    
+                    
+
+                    <div>
+                        <div id="alertaCiudad" class="alert alert-danger" role="alert">
+                            Debe seleccionar una ciudad
+                        </div>
+                                <label for="ciudad">Ciudad:</label><br>
+                                <select name="ciudad" id="ciudad">
+                                    <option value="0"> </option>
+                                    <option value="1">Santiago</option>
+                                    <option value="2">Valparaiso</option>
+                                    <option value="3">Puerto Montt</option>
+                                    <option value="4">Iquique</option>
+                                    <option value="5">La Serena</option>
+                                    <option value="6">Punta Arenas</option>
+                                    <option value="7">Concepción</option>
+                                    <option value="8">Valdivia</option>
+                                    <option value="9">Talca</option>
+                                    <option value="10">Arica</option>
+                                    <option value="11">Antofagasta</option>
+                                    <option value="12">Osorno</option>
+                                </select> 
+                    </div><br>
+
+                    <div class="mb-2">
+                        <div id="alertaMensaje" class="alert alert-danger" role="alert">
+                            Debe ingresar un mensaje de minimo 30 caracteres
+                        </div>
+                        <label for="mensaje">Mensaje</label>
+                        <textarea name="mensaje" id="mensaje" class="form-control" placeholder="Ej: Hola, me gustaria contactar con ustedes para...."></textarea>
+
+                    </div>
+
+                </div>
+
+                    <input type="submit" class="btn btn-primary" id="enviar" value="enviar"><br>
+                    <input type="reset" class="btn btn-dark" id="limpiar" value="Limpiar">
+                    <br>
+                    <a href="Index.html" type="button" class="btn btn-secondary">Volver al Inicio</button></a>
+                    
+            </div>
+        </form>
+    </div>
+  
+</div>   
+</body>
+</html>
